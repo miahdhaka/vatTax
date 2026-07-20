@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'boishakhi';
+    src: url('https://dakhila.ldtax.gov.bd/fonts/Boishkhi/Boishkhi.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'nikosh';
+    src: url('https://dakhila.ldtax.gov.bd/fonts/NikoshBAN.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kalpurush';
+    src: url('https://dakhila.ldtax.gov.bd/fonts/NikoshBAN.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'kalpurushregular';
+    src: url('https://dakhila.ldtax.gov.bd/fonts/NikoshBAN.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #f4ffe6 !important;
+  margin: 0;
+  padding: 0;
+  font-family: 'kalpurush', 'kalpurushregular', 'nikosh', Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.2;
+  color: #333;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'kalpurush', 'kalpurushregular', 'nikosh', Arial, sans-serif !important;
+}
+
+.input_bangla {
+  font-family: 'boishakhi', 'nikosh', Arial, sans-serif !important;
+  font-size: 90% !important;
+}
+
+.numeric_bangla {
+  font-family: 'boishakhi', 'nikosh', Arial, sans-serif !important;
+  font-size: 80% !important;
+}
+
+.dotted_botton {
+  border: none;
+  border-bottom: 1px dotted #000;
+  background-color: #fff;
+}
+
+.border_none {
+  border-top: none !important;
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+}
+
+.qrcode-print {
+  width: 100%;
+  height: 70px;
+  display: list-item;
+  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKAQMAAAAmHlAyAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA7klEQVQokZXRMaoEQQgEUMFU6KsIkwp9dcFU8CoNkwpu7+5nGOdHa/Si6qIa4IcbpSOLKxsJ3I5wpc5UopLwB2MZ0z+axOInIWjBX+7FUf6+b4eLAOg771vz4m4ISnVwI/p+esrKRgAPsTBuxBKQyUsbgctOtgmNZAg1WaURqDADFzcOIhVbpI0Apy4u4c4UI2GTRlL1AkRuBJyixxJtxD3eoniH3Ug2M+X4hN25p8ZxcGfulsZTO9FOp0pqfI89k4Y37s/SM8RXI4Hq/uyRnelzcHxy74yVPEQfdONQW53gRMhDG0cFJ3xGvfGHewFwDxqm1OcGYAAAAABJRU5ErkJggg==);
+  list-style-position: inside;
+  background-repeat: no-repeat;
+}
+
+.b1 {
+  border: 1px dotted;
+  padding: 2px;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+@media print {
+  @page {
+    size: a4;
+    margin: 0mm;
+  }
+  html {
+    background-color: #ffffff !important;
+    margin: 0px;
+  }
+  body {
+    background-color: #ffffff !important;
+    border: solid 0px blue;
+    margin: 0mm;
+  }
+  .print-btn-container {
+    display: none !important;
+  }
+}
