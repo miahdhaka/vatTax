@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="bn">
       <head>
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all"
