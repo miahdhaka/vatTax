@@ -476,7 +476,7 @@ export default function DakhilaPrintPage1() {
                                             lineHeight: "1.2",
                                           }}
                                         >
-                                          ৩০ আষাঢ় ১৪৩৩
+                                          ৩১ আষাঢ় ১৪৩৩
                                         </span>
                                         <span
                                           style={{
