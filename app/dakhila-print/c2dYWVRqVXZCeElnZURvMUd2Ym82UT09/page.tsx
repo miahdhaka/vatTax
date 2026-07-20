@@ -83,7 +83,7 @@ export default function DakhilaPrintPage2() {
                                     <tr>
                                       <td className="text-left">(সংশোধিত)</td>
                                       <td className="text-right input_bangla">
-                                        ক্রমিক নং ২৬৫০২৫১১৮১৯৪
+                                        ক্রমিক নং ২৬৫০২৫১১৮১৯৯
                                       </td>
                                     </tr>
                                     <tr>
