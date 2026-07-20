@@ -83,7 +83,7 @@ export default function DakhilaPrintPage() {
                                     <tr>
                                       <td className="text-left">(সংশোধিত)</td>
                                       <td className="text-right input_bangla">
-                                        ক্রমিক নং 265025118194
+                                        ক্রমিক নং ২৬৫০২৫১১৮১৯৪
                                       </td>
                                     </tr>
                                     <tr>
@@ -128,7 +128,7 @@ export default function DakhilaPrintPage() {
                                         className="dotted_botton input_bangla"
                                         style={{ padding: "0 10px 0 5px" }}
                                       >
-                                        দুয়ারীপাড়া-6
+                                        দূরারীপাড়া-৬
                                       </td>
                                       <td style={{ width: "105px" }}>
                                         উপজেলা/থানা:
@@ -192,7 +192,7 @@ export default function DakhilaPrintPage() {
                                         className="dotted_botton numeric_bangla"
                                         style={{ paddingLeft: "10px" }}
                                       >
-                                        156/8
+                                        ১৫৬/৮
                                       </td>
                                     </tr>
                                   </tbody>
@@ -208,7 +208,7 @@ export default function DakhilaPrintPage() {
                                         className="dotted_botton numeric_bangla"
                                         style={{ paddingLeft: "10px" }}
                                       >
-                                        1562
+                                        ১৫৬২
                                       </td>
                                     </tr>
                                   </tbody>
@@ -273,13 +273,13 @@ export default function DakhilaPrintPage() {
                                 <tbody style={{ height: "21px" }}>
                                   <tr>
                                     <td className="b1 input_bangla text-center">
-                                      1
+                                      ১
                                     </td>
                                     <td className="b1 input_bangla">
                                       মোঃ মোজাম্মেল হক গং
                                     </td>
                                     <td className="b1 input_bangla text-center">
-                                      1
+                                      ১
                                     </td>
                                   </tr>
                                 </tbody>
@@ -324,11 +324,11 @@ export default function DakhilaPrintPage() {
                                 <tbody style={{ height: "21px" }}>
                                   <tr>
                                     <td className="b1 input_bangla text-center">
-                                      1
+                                      ১
                                     </td>
-                                    <td className="b1 input_bangla">90</td>
-                                    <td className="b1">বাড়ী( আবাসিক)</td>
-                                    <td className="b1 input_bangla">1.45</td>
+                                    <td className="b1 input_bangla">৯০</td>
+                                    <td className="b1">বাড়ী (আবাসিক)</td>
+                                    <td className="b1 input_bangla">১.৪৫</td>
                                   </tr>
                                 </tbody>
                               </table>
@@ -354,7 +354,7 @@ export default function DakhilaPrintPage() {
                                       className="b1 input_bangla"
                                       style={{ width: "50%" }}
                                     >
-                                      1.45
+                                      ১.৪৫
                                     </td>
                                   </tr>
                                 </tbody>
@@ -406,11 +406,11 @@ export default function DakhilaPrintPage() {
 
                                   <tr>
                                     <td align="center">০</td>
-                                    <td align="center">৩৮৬</td>
-                                    <td align="center">৪৮</td>
-                                    <td align="center">১২০</td>
-                                    <td align="center">৫৫৪</td>
-                                    <td align="center">৫৫৪</td>
+                                    <td align="center">০</td>
+                                    <td align="center">০</td>
+                                    <td align="center">৬০</td>
+                                    <td align="center">৬০</td>
+                                    <td align="center">৬০</td>
                                     <td align="center">০</td>
                                     <td align="center"></td>
                                   </tr>
@@ -423,7 +423,7 @@ export default function DakhilaPrintPage() {
                                 }}
                               >
                                 <p className="dotted_botton" style={{ margin: "5px 0 15px 0", paddingBottom: "3px" }}>
-                                   সর্বমোট (কথায়): পাঁচ শত চুয়ান্ন টাকা মাত্র ।
+                                  সর্বমোট (কথায়): ষাট টাকা মাত্র ।
                                 </p>
                               </div>
 
@@ -433,16 +433,16 @@ export default function DakhilaPrintPage() {
                                     style={{ width: "350px", textAlign: "left", fontSize: "12px", lineHeight: "1.4" }}
                                   >
                                     <p style={{ margin: "0 0 4px 0" }}>
-                                      নোট: সর্বশেষ কর পরিশোধের সাল - 2025-2026 (অর্থবছর)
+                                      নোট: সর্বশেষ কর পরিশোধের সাল - 2026-2027 (অর্থবছর)
                                     </p>
                                     <p className="input_bangla" style={{ margin: "0 0 6px 0" }}>
-                                      চালান নং : 2526-0002410545
+                                      চালান নং : ২৫২৬-০০০২৪১০৫৪৫
                                     </p>
                                     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                                       <span>তারিখ :</span>
                                       <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center" }}>
-                                        <span style={{ margin: 0, padding: "0 4px", fontSize: "12px", lineHeight: "1.2" }}>৩১ আষাঢ় ১৪৩২</span>
-                                        <span style={{ borderTop: "1px solid #000", padding: "2px 4px 0 4px", fontSize: "12px", lineHeight: "1.2" }}>১৫ জুলাই, ২০২৫</span>
+                                        <span style={{ margin: 0, padding: "0 4px", fontSize: "12px", lineHeight: "1.2" }}>৩০ আষাঢ় ১৪৩৩</span>
+                                        <span style={{ borderTop: "1px solid #000", padding: "2px 4px 0 4px", fontSize: "12px", lineHeight: "1.2" }}>১৫ জুলাই, ২০২৬</span>
                                       </div>
                                     </div>
                                   </div>
@@ -488,7 +488,7 @@ export default function DakhilaPrintPage() {
                                   marginTop: "15px",
                                 }}
                               ></div>
-                              <div className="from-controll">1/1</div>
+                              <div className="from-controll">১/১</div>
                             </div>
                           </div>
                         </div>
