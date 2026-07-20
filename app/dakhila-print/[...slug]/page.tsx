@@ -436,7 +436,7 @@ export default function DakhilaPrintPage() {
                                       নোট: সর্বশেষ কর পরিশোধের সাল - 2026-2027 (অর্থবছর)
                                     </p>
                                     <p className="input_bangla" style={{ margin: "0 0 6px 0" }}>
-                                      চালান নং : ২৫২৬-০০০২৪১০৫৪৫
+                                      চালান নং : ২৬২৭-০০০০৯৩৩৬১৬
                                     </p>
                                     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
                                       <span>তারিখ :</span>
