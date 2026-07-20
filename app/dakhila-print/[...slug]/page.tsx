@@ -276,7 +276,7 @@ export default function DakhilaPrintPage() {
                                       ১
                                     </td>
                                     <td className="b1 input_bangla">
-                                      মোঃ মোজাম্মেল হক গং
+                                      নজরুল ইসলাম
                                     </td>
                                     <td className="b1 input_bangla text-center">
                                       ১
