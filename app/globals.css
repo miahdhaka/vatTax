@@ -62,7 +62,6 @@ body, h1, h2, h3, h4, h5, h6 {
 
 .qrcode-print {
   width: 100%;
-  height: 70px;
   display: list-item;
   list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEoAAABKAQMAAAAmHlAyAAAABlBMVEX///8AAABVwtN+AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA7klEQVQokZXRMaoEQQgEUMFU6KsIkwp9dcFU8CoNkwpu7+5nGOdHa/Si6qIa4IcbpSOLKxsJ3I5wpc5UopLwB2MZ0z+axOInIWjBX+7FUf6+b4eLAOg771vz4m4ISnVwI/p+esrKRgAPsTBuxBKQyUsbgctOtgmNZAg1WaURqDADFzcOIhVbpI0Apy4u4c4UI2GTRlL1AkRuBJyixxJtxD3eoniH3Ug2M+X4hN25p8ZxcGfulsZTO9FOp0pqfI89k4Y37s/SM8RXI4Hq/uyRnelzcHxy74yVPEQfdONQW53gRMhDG0cFJ3xGvfGHewFwDxqm1OcGYAAAAABJRU5ErkJggg==);
   list-style-position: inside;
