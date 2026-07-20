@@ -428,28 +428,86 @@ export default function DakhilaPrintPage() {
                               </div>
 
                               <div className="row" style={{ marginTop: "10px" }}>
-                                <div className="col-md-12" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+                                <div
+                                  className="col-md-12"
+                                  style={{
+                                    display: "flex",
+                                    justifyContent: "space-between",
+                                    alignItems: "center",
+                                  }}
+                                >
                                   <div
-                                    style={{ width: "350px", textAlign: "left", fontSize: "12px", lineHeight: "1.4" }}
+                                    style={{
+                                      width: "350px",
+                                      textAlign: "left",
+                                      fontSize: "12px",
+                                      lineHeight: "1.4",
+                                    }}
                                   >
-                                    <p style={{ margin: "0 0 4px 0" }}>
+                                    <p style={{ margin: "0 0 2px 0" }}>
                                       নোট: সর্বশেষ কর পরিশোধের সাল - 2026-2027 (অর্থবছর)
                                     </p>
-                                    <p className="input_bangla" style={{ margin: "0 0 6px 0" }}>
+                                    <p
+                                      className="input_bangla"
+                                      style={{ margin: "0 0 4px 0" }}
+                                    >
                                       চালান নং : ২৬২৭-০০০০৯৩৩৬১৬
                                     </p>
-                                    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                                    <div
+                                      style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "6px",
+                                      }}
+                                    >
                                       <span>তারিখ :</span>
-                                      <div style={{ display: "inline-flex", flexDirection: "column", alignItems: "center" }}>
-                                        <span style={{ margin: 0, padding: "0 4px", fontSize: "12px", lineHeight: "1.2" }}>৩০ আষাঢ় ১৪৩৩</span>
-                                        <span style={{ borderTop: "1px solid #000", padding: "2px 4px 0 4px", fontSize: "12px", lineHeight: "1.2" }}>১৫ জুলাই, ২০২৬</span>
+                                      <div
+                                        style={{
+                                          display: "inline-flex",
+                                          flexDirection: "column",
+                                          alignItems: "center",
+                                        }}
+                                      >
+                                        <span
+                                          style={{
+                                            margin: 0,
+                                            padding: "0 2px",
+                                            fontSize: "12px",
+                                            lineHeight: "1.2",
+                                          }}
+                                        >
+                                          ৩০ আষাঢ় ১৪৩৩
+                                        </span>
+                                        <span
+                                          style={{
+                                            borderTop: "1px solid #000",
+                                            padding: "1px 2px 0 2px",
+                                            fontSize: "12px",
+                                            lineHeight: "1.2",
+                                          }}
+                                        >
+                                          ১৫ জুলাই, ২০২৬
+                                        </span>
                                       </div>
                                     </div>
                                   </div>
                                   <div
                                     style={{ width: "90px", textAlign: "center" }}
                                   >
-                                    <div className="qrcode-print"></div>
+                                    <img
+                                      src={`https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=0&qzone=0&ecc=M&data=${encodeURIComponent(
+                                        "https://dakhilaldtaxgovbd.vercel.app/dakhila-print/blYxWTJqVXZCeElnZURvMUd2Ym82UT09"
+                                      )}`}
+                                      alt="QR Code"
+                                      width={74}
+                                      height={74}
+                                      style={{
+                                        display: "block",
+                                        margin: "0 auto",
+                                        width: "74px",
+                                        height: "74px",
+                                      }}
+                                    />
                                   </div>
                                   <div
                                     style={{
