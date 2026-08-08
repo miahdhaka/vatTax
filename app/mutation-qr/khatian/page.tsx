@@ -357,8 +357,8 @@ export default function KhatianPage() {
                     <div style={{ fontSize: "9.2px", fontFamily, lineHeight: "1.35", textAlign: "left" }}>
                       <div>আবেদন নম্বর : ১২৬৮০০৪</div>
                       <div>আবেদনের তারিখ : ১৪-৮-২০২৫</div>
-                      <div>• মিউটেশনের মামলা নং: ১৯১৬ (IX-I)/ ২০২৫-২৬</div>
-                      <div>অনলাইন ডিসিয়ার নং: DCR23265000605081</div>
+                      <div>নামজারির মামলা নং: ১৯১৬ (IX-I)/ ২০২৫-২৬</div>
+                      <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮১</div>
                     </div>
                   </div>
                 </div>
@@ -366,15 +366,16 @@ export default function KhatianPage() {
                 {/* Location Row */}
                 <div
                   style={{
-                    textAlign: "center",
+                    width: "100%",
                     fontSize: "9.8px",
                     fontFamily,
                     marginTop: "4px",
                     marginBottom: "6px",
-                    padding: "2px 0",
+                    padding: "2px 4px",
                     display: "flex",
-                    justifyContent: "center",
-                    gap: "40px",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    boxSizing: "border-box",
                   }}
                 >
                   <span>জিলা : ঢাকা</span>
@@ -396,31 +397,31 @@ export default function KhatianPage() {
                   <thead>
                     {/* Row 1: Main headers */}
                     <tr>
-                      <th style={{ ...cellHeader, width: "21%" }}>
+                      <th style={{ ...cellHeader, width: "24%" }}>
                         মালিক, অকৃষি প্রজা বা<br />ইজারাদারের নাম ও ঠিকানা
                       </th>
                       <th style={{ ...cellHeader, width: "4.5%" }}>
                         অংশ
                       </th>
-                      <th style={{ ...cellHeader, width: "5.5%" }}>
+                      <th style={{ ...cellHeader, width: "6%" }}>
                         মোট ভূমি<br />উন্নয়ন কর
                       </th>
-                      <th style={{ ...cellHeader, width: "5.5%" }}>
+                      <th style={{ ...cellHeader, width: "6%" }}>
                         দাগ/প্লট<br />নং
                       </th>
-                      <th colSpan={2} style={{ ...cellHeader, width: "9.5%" }}>
+                      <th colSpan={2} style={{ ...cellHeader, width: "10%" }}>
                         জমির শ্রেণী
                       </th>
-                      <th colSpan={2} style={{ ...cellHeader, width: "9.5%" }}>
+                      <th colSpan={2} style={{ ...cellHeader, width: "10%" }}>
                         দাগের মোট জমির পরিমাণ
                       </th>
-                      <th style={{ ...cellHeader, width: "8.5%" }}>
+                      <th style={{ ...cellHeader, width: "9%" }}>
                         দাগের মধ্যে অত্র<br />খতিয়ানের অংশ
                       </th>
-                      <th colSpan={2} style={{ ...cellHeader, width: "10.5%" }}>
+                      <th colSpan={2} style={{ ...cellHeader, width: "11.5%" }}>
                         অংশানুযায়ী জমির<br />পরিমাণ
                       </th>
-                      <th style={{ ...cellHeader, width: "25.5%", fontSize: "9px" }}>
+                      <th style={{ ...cellHeader, width: "19%", fontSize: "9px" }}>
                         দখল/স্বত্ব বিষয়ক বা অন্যান্য<br />বিষয়ে মন্তব্য
                       </th>
                     </tr>
@@ -462,12 +463,11 @@ export default function KhatianPage() {
                       <td style={cellBase}>০</td>
                       <td style={cellBase}>১.৪৫</td>
                       <td style={{ ...cellBase, textAlign: "left", fontSize: "8.8px", lineHeight: "1.4", padding: "4px 5px" }}>
-                        <div>দলিল নং: ২৫১৫</div>
-                        <div>তাং: ১০/১০/২০১৬</div>
+                        <div>দলিল নং: ৬৫৯১</div>
+                        <div>তাং: ২৪/০৭/২০২৫</div>
                         <div>পল্লবী, ঢাকা</div>
-                        <div style={{ marginTop: "6px" }}>আগত নামজারি খতিয়ান: ৬৮২ ।</div>
-                        <div style={{ marginTop: "6px" }}>জোত নং ৪৯/০৭ ।</div>
-                        <div style={{ marginTop: "6px" }}>নামজারি ও জমাভাগ অনুমোদনের তারিখঃ ১৮/১১/২০২০ খ্রিঃ।</div>
+                        <div style={{ marginTop: "6px" }}>জোত নং ১৫৬/৮ ।</div>
+                        <div style={{ marginTop: "6px" }}>নামজারি ও জমাভাগ অনুমোদনের তারিখঃ ১৯/১১/২০২৩ খ্রিঃ।</div>
                       </td>
                     </tr>
                     {/* Summary Row */}
@@ -651,8 +651,8 @@ export default function KhatianPage() {
                     <div style={{ fontSize: "9.2px", fontFamily, lineHeight: "1.35", textAlign: "left" }}>
                       <div>আবেদন নম্বর : ১২৬৮০০৪</div>
                       <div>আবেদনের তারিখ : ১৪-৮-২০২৫</div>
-                      <div>• মিউটেশনের মামলা নং: ১৯১৬ (IX-I)/ ২০২৫-২৬</div>
-                      <div>অনলাইন ডিসিয়ার নং: DCR23265000605081</div>
+                      <div>নামজারির মামলা নং: ১৯১৬ (IX-I)/ ২০২৫-২৬</div>
+                      <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮১</div>
                     </div>
                   </div>
                 </div>
@@ -660,15 +660,16 @@ export default function KhatianPage() {
                 {/* Location Row */}
                 <div
                   style={{
-                    textAlign: "center",
+                    width: "100%",
                     fontSize: "9.8px",
                     fontFamily,
                     marginTop: "4px",
                     marginBottom: "16px",
-                    padding: "2px 0",
+                    padding: "2px 4px",
                     display: "flex",
-                    justifyContent: "center",
-                    gap: "40px",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    boxSizing: "border-box",
                   }}
                 >
                   <span>জিলা : ঢাকা</span>
@@ -699,7 +700,7 @@ export default function KhatianPage() {
                     }}
                   >
                     <p style={{ margin: "0 0 6px 0" }}>
-                      ১ । এই মিউটেশন খতিয়ানটি অনলাইন মিউটেশন সিস্টেমে কর্তৃক প্রণীত। ইহা আইনগতভাবে বৈধ ও সর্বক্ষেত্রে গ্রহণযোগ্য হবে।
+                      ১ । এই নামজারি খতিয়ানটি অনলাইন নামজারি সিস্টেমে কর্তৃক প্রণীত। ইহা আইনগতভাবে বৈধ ও সর্বক্ষেত্রে গ্রহণযোগ্য হবে।
                     </p>
                     <p style={{ margin: "0 0 6px 0" }}>
                       ২ । অনলাইন খতিয়ানের সঠিকতা যাচাইয়ের জন্য কিউআর (QR) কোডটি স্ক্যান করে ভূমি মন্ত্রণালয়ের ওয়েবসাইট থেকে যাচাই করতে পারবেন।
