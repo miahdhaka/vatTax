@@ -396,7 +396,7 @@ export default function KhatianPage() {
                   <thead>
                     {/* Row 1: Main headers */}
                     <tr>
-                      <th style={{ ...cellHeader, width: "22%" }}>
+                      <th style={{ ...cellHeader, width: "21%" }}>
                         মালিক, অকৃষি প্রজা বা<br />ইজারাদারের নাম ও ঠিকানা
                       </th>
                       <th style={{ ...cellHeader, width: "4.5%" }}>
@@ -408,19 +408,19 @@ export default function KhatianPage() {
                       <th style={{ ...cellHeader, width: "5.5%" }}>
                         দাগ/প্লট<br />নং
                       </th>
-                      <th style={{ ...cellHeader, width: "7%" }}>
-                        জমির রেকর্ডীয়<br />শ্রেণী
+                      <th colSpan={2} style={{ ...cellHeader, width: "9.5%" }}>
+                        জমির শ্রেণী
                       </th>
-                      <th colSpan={4} style={{ ...cellHeader, width: "17%" }}>
+                      <th colSpan={2} style={{ ...cellHeader, width: "9.5%" }}>
                         দাগের মোট জমির পরিমাণ
                       </th>
                       <th style={{ ...cellHeader, width: "8.5%" }}>
                         দাগের মধ্যে অত্র<br />খতিয়ানের অংশ
                       </th>
-                      <th colSpan={2} style={{ ...cellHeader, width: "9.5%" }}>
+                      <th colSpan={2} style={{ ...cellHeader, width: "10.5%" }}>
                         অংশানুযায়ী জমির<br />পরিমাণ
                       </th>
-                      <th style={{ ...cellHeader, width: "20.5%", fontSize: "9px" }}>
+                      <th style={{ ...cellHeader, width: "25.5%", fontSize: "9px" }}>
                         দখল/স্বত্ব বিষয়ক বা অন্যান্য<br />বিষয়ে মন্তব্য
                       </th>
                     </tr>
@@ -430,7 +430,6 @@ export default function KhatianPage() {
                       <th style={cellHeader}>২</th>
                       <th style={cellHeader}>৩</th>
                       <th style={cellHeader}>৪</th>
-                      <th style={cellHeader}></th>
                       <th style={{ ...cellHeader, fontSize: "8.5px" }}>কৃষি<br />৫ (ক)</th>
                       <th style={{ ...cellHeader, fontSize: "8.5px" }}>অকৃষি<br />৫ (খ)</th>
                       <th style={{ ...cellHeader, fontSize: "8.5px" }}>একর<br />৬ (ক)</th>
@@ -454,22 +453,21 @@ export default function KhatianPage() {
                       </td>
                       <td style={cellBase}>১.০০০</td>
                       <td style={cellBase}>৬০</td>
-                      <td style={cellBase}>২৩৫৬</td>
-                      <td style={cellBase}>পতিত</td>
+                      <td style={cellBase}>৯০</td>
                       <td style={cellBase}></td>
-                      <td style={cellBase}></td>
-                      <td style={cellBase}>.</td>
-                      <td style={cellBase}></td>
-                      <td style={cellBase}>০.০৭৮৬</td>
+                      <td style={cellBase}>বাড়ি আবাসিক</td>
                       <td style={cellBase}>০</td>
-                      <td style={cellBase}>০০৫৯০৭</td>
+                      <td style={cellBase}>১.৪৫</td>
+                      <td style={cellBase}>১.৪৫</td>
+                      <td style={cellBase}>০</td>
+                      <td style={cellBase}>১.৪৫</td>
                       <td style={{ ...cellBase, textAlign: "left", fontSize: "8.8px", lineHeight: "1.4", padding: "4px 5px" }}>
-                        <div>দলিল নং: ১৫১২</div>
+                        <div>দলিল নং: ২৫১৫</div>
                         <div>তাং: ১০/১০/২০১৬</div>
                         <div>পল্লবী, ঢাকা</div>
-                        <div style={{ marginTop: "10px" }}>আগত নামজারি খতিয়ান: ৬৮২ ।</div>
-                        <div style={{ marginTop: "10px" }}>জোত নং ৪৯/০৭ ।</div>
-                        <div style={{ marginTop: "10px" }}>নামজারি ও জমাভাগ অনুমোদনের তারিখঃ --/--/---- খ্রিঃ।</div>
+                        <div style={{ marginTop: "6px" }}>আগত নামজারি খতিয়ান: ৬৮২ ।</div>
+                        <div style={{ marginTop: "6px" }}>জোত নং ৪৯/০৭ ।</div>
+                        <div style={{ marginTop: "6px" }}>নামজারি ও জমাভাগ অনুমোদনের তারিখঃ ১৮/১১/২০২০ খ্রিঃ।</div>
                       </td>
                     </tr>
                     {/* Summary Row */}
@@ -484,12 +482,11 @@ export default function KhatianPage() {
                       <td style={cellBase}></td>
                       <td style={cellBase}></td>
                       <td style={cellBase}></td>
-                      <td style={cellBase}></td>
                       <td style={{ ...cellBase, fontWeight: "bold" }}>মোট জমি</td>
                       <td style={cellBase}>০</td>
-                      <td style={cellBase}>০০৫৯০৭</td>
+                      <td style={cellBase}>১.৪৫</td>
                       <td style={{ ...cellBase, fontSize: "8.8px", textAlign: "left", fontWeight: "bold", padding: "3px 5px" }}>
-                        কথায়: ০ একর ০০ শতক ৫৯ অযুতাংশ ০৭ লক্ষাংশ
+                        কথায়: ০ একর ১ শতক ৪৫ অযুতাংশ
                       </td>
                     </tr>
                   </tbody>
