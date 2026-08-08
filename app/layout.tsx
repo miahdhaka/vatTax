@@ -24,6 +24,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
           href="https://dakhila.ldtax.gov.bd/assets/global/plugins/font-awesome/css/font-awesome.min.css"
           rel="stylesheet"
           type="text/css"
