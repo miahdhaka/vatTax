@@ -1,11 +1,209 @@
 "use client";
 
+import { useState, useEffect } from "react";
+
 export default function MutationQrPage() {
   const fontFamily =
     "'Noto Sans Bengali', 'kalpurush', Arial, sans-serif";
 
+  const [formattedDate, setFormattedDate] = useState("রবিবার, ৯ আগস্ট ২০২৬");
+
+  useEffect(() => {
+    const daysBangla = [
+      "রবিবার",
+      "সোমবার",
+      "মঙ্গলবার",
+      "বুধবার",
+      "বৃহস্পতিবার",
+      "শুক্রবার",
+      "শনিবার",
+    ];
+    const monthsBangla = [
+      "জানুয়ারি",
+      "ফেব্রুয়ারি",
+      "মার্চ",
+      "এপ্রিল",
+      "মে",
+      "জুন",
+      "জুলাই",
+      "আগস্ট",
+      "সেপ্টেম্বর",
+      "অক্টোবর",
+      "নভেম্বর",
+      "ডিসেম্বর",
+    ];
+    const toBanglaDigits = (num: number) =>
+      num.toString().replace(/[0-9]/g, (d) => "০১২৩৪৫৬৭৮৯"[parseInt(d, 10)]);
+
+    const now = new Date();
+    const dayName = daysBangla[now.getDay()];
+    const dayNum = toBanglaDigits(now.getDate());
+    const monthName = monthsBangla[now.getMonth()];
+    const yearNum = toBanglaDigits(now.getFullYear());
+
+    setFormattedDate(`${dayName}, ${dayNum} ${monthName} ${yearNum}`);
+  }, []);
+
   return (
-    <div style={{ fontFamily, color: "#333", backgroundColor: "#f5f5f5", minHeight: "100vh" }}>
+    <div style={{ fontFamily, color: "#333", backgroundColor: "#f5f5f5", minHeight: "100vh", overflowX: "hidden" }}>
+      {/* Dynamic Mobile Responsive CSS */}
+      <style>{`
+        .mqr-header-container {
+          max-width: 1140px;
+          margin: 0 auto;
+          padding: 0 15px;
+        }
+        .mqr-header-inner {
+          justify-content: space-between;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          border-bottom: 1px solid #E1E1E1;
+          padding: 6px 0;
+        }
+        .mqr-logo-group {
+          display: flex;
+          align-items: center;
+          column-gap: 20px;
+          height: 78px;
+        }
+        .mqr-land-logo {
+          max-height: 68px;
+          display: block;
+        }
+        .mqr-date-group {
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+        }
+        .mqr-main-wrap {
+          position: relative;
+          max-width: 1140px;
+          margin: 0 auto;
+          padding: 20px 15px;
+        }
+        .mqr-table-box {
+          margin: 0 auto;
+          width: 80%;
+        }
+        .mqr-table {
+          width: 100%;
+          margin-top: 2%;
+          font-size: 100%;
+          border: 1px solid #e3e3e3;
+          border-collapse: collapse;
+          background-color: #fff;
+        }
+        .mqr-td-label {
+          border-right: 1px solid #e3e3e3;
+          border-bottom: 1px solid #e3e3e3;
+          width: 45%;
+          padding: 12px 15px;
+          font-size: 16px;
+          vertical-align: top;
+        }
+        .mqr-td-val {
+          border-right: 1px solid #e3e3e3;
+          border-bottom: 1px solid #e3e3e3;
+          padding: 12px 15px;
+          font-size: 16px;
+          vertical-align: top;
+        }
+        .mqr-btn-download {
+          display: inline-block;
+          padding: 10px 24px;
+          background-color: #28a745;
+          color: #ffffff;
+          border-radius: 4px;
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 500;
+          text-align: center;
+          transition: background-color 0.2s ease;
+        }
+        .mqr-btn-download:hover {
+          background-color: #218838;
+        }
+        .mqr-footer-inner {
+          max-width: 1080px;
+          margin: 0 auto;
+          padding: 0 15px;
+        }
+        .mqr-footer-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+        }
+
+        /* Mobile & Tablet Responsiveness */
+        @media (max-width: 768px) {
+          .mqr-table-box {
+            width: 100% !important;
+          }
+          .mqr-header-inner {
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px 0;
+          }
+          .mqr-logo-group {
+            height: auto;
+            column-gap: 12px;
+          }
+          .mqr-land-logo {
+            max-height: 52px;
+          }
+          .mqr-date-group {
+            width: 100%;
+            justify-content: center;
+            border-top: 1px dashed #e1e1e1;
+            padding-top: 8px;
+            margin-top: 2px;
+          }
+          .mqr-td-label {
+            width: 42%;
+            padding: 10px 12px;
+            font-size: 14.5px;
+          }
+          .mqr-td-val {
+            padding: 10px 12px;
+            font-size: 14.5px;
+          }
+          .mqr-footer-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 24px 16px;
+          }
+          .mqr-btn-download {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .mqr-header-inner {
+            align-items: center;
+          }
+          .mqr-logo-group {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+          .mqr-td-label {
+            width: 44%;
+            padding: 8px 10px;
+            font-size: 13.5px;
+          }
+          .mqr-td-val {
+            padding: 8px 10px;
+            font-size: 13.5px;
+          }
+          .mqr-footer-grid {
+            grid-template-columns: 1fr !important;
+            gap: 24px;
+          }
+        }
+      `}</style>
+
       {/* ===== HEADER ===== */}
       <header
         style={{
@@ -14,31 +212,10 @@ export default function MutationQrPage() {
           zIndex: 999,
         }}
       >
-        <div
-          style={{
-            maxWidth: "1140px",
-            margin: "0 auto",
-            padding: "0 15px",
-          }}
-        >
-          <div
-            style={{
-              justifyContent: "space-between",
-              display: "flex",
-              alignItems: "center",
-              width: "100%",
-              borderBottom: "1px solid #E1E1E1",
-            }}
-          >
+        <div className="mqr-header-container">
+          <div className="mqr-header-inner">
             {/* Logo Section */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                columnGap: "20px",
-                height: "78px",
-              }}
-            >
+            <div className="mqr-logo-group">
               <a href="/" style={{ display: "flex", alignItems: "center" }}>
                 <img
                   src="/mutation-images/home-icon.png"
@@ -50,47 +227,21 @@ export default function MutationQrPage() {
                 <img
                   src="/mutation-images/land-logo.jpg"
                   alt="Logo"
-                  style={{ maxHeight: "68px", display: "block" }}
+                  className="mqr-land-logo"
                 />
               </a>
             </div>
 
             {/* Date Section */}
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                columnGap: "10px",
-              }}
-            >
+            <div className="mqr-date-group">
               <div
                 style={{
-                  position: "relative",
                   display: "flex",
-                  paddingLeft: "25px",
-                  flexWrap: "nowrap",
                   alignItems: "center",
                   height: "100%",
                   minHeight: "20px",
                 }}
               >
-                {/* Calendar icon */}
-                <span
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    top: "50%",
-                    marginTop: "-10px",
-                    width: "20px",
-                    height: "20px",
-                    display: "block",
-                    fontSize: "16px",
-                    lineHeight: "20px",
-                    textAlign: "center",
-                  }}
-                >
-                  📅
-                </span>
                 <span
                   style={{
                     fontSize: "14px",
@@ -98,7 +249,7 @@ export default function MutationQrPage() {
                     fontFamily,
                   }}
                 >
-                  সোমবার, ৩ আগস্ট ২০২৬
+                  {formattedDate}
                 </span>
               </div>
             </div>
@@ -107,14 +258,7 @@ export default function MutationQrPage() {
       </header>
 
       {/* ===== MAIN CONTENT ===== */}
-      <div
-        style={{
-          position: "relative",
-          maxWidth: "1140px",
-          margin: "0 auto",
-          padding: "20px 15px",
-        }}
-      >
+      <div className="mqr-main-wrap">
         {/* Watermark background */}
         <div
           style={{
@@ -124,9 +268,9 @@ export default function MutationQrPage() {
             backgroundPosition: "left top",
             top: 0,
             bottom: 0,
-            left: "-9%",
+            left: "0",
             right: 0,
-            opacity: 0.2,
+            opacity: 0.15,
             pointerEvents: "none",
             zIndex: 0,
           }}
@@ -135,25 +279,17 @@ export default function MutationQrPage() {
         <div style={{ position: "relative", zIndex: 1 }}>
           <div
             style={{
-              width: "99%",
+              width: "100%",
               fontSize: "100%",
               margin: "0 auto",
-              padding: "0 1%",
             }}
           >
-            <div style={{ margin: "0 auto", width: "80%" }}>
+            <div className="mqr-table-box">
               <br />
               <table
                 cellSpacing={0}
                 cellPadding={5}
-                style={{
-                  width: "100%",
-                  marginTop: "2%",
-                  fontSize: "100%",
-                  border: "1px solid #e3e3e3",
-                  borderCollapse: "collapse",
-                  backgroundColor: "#fff",
-                }}
+                className="mqr-table"
               >
                 <tbody>
                   {/* Notice row */}
@@ -163,6 +299,8 @@ export default function MutationQrPage() {
                       style={{
                         padding: "12px 15px",
                         borderBottom: "1px solid #e3e3e3",
+                        fontSize: "15px",
+                        lineHeight: "1.4",
                       }}
                     >
                       <b>
@@ -173,179 +311,73 @@ export default function MutationQrPage() {
 
                   {/* ভূমি অফিস এর ঠিকানা */}
                   <tr>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        width: "50%",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-label">
                       ভূমি অফিস এর ঠিকানা
                     </td>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-val">
                       দুয়ারীপাড়া, মোহাম্মদপুর, ঢাকা
                     </td>
                   </tr>
 
                   {/* খতিয়ান নং */}
                   <tr>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        width: "50%",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-label">
                       খতিয়ান নং
                     </td>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-val">
                       ১৫৬২
                     </td>
                   </tr>
 
                   {/* আবেদন নম্বর */}
                   <tr>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        width: "50%",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-label">
                       আবেদন নম্বর
                     </td>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-val">
                       ১২৬৮০০৪
                     </td>
                   </tr>
 
                   {/* আবেদনের তারিখ */}
                   <tr>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        width: "50%",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-label">
                       আবেদনের তারিখ
                     </td>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-val">
                       ১৪-৮-২০২৫
                     </td>
                   </tr>
 
                   {/* মিউটেশন মামলা নং */}
                   <tr>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        width: "50%",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-label">
                       মিউটেশন মামলা নং
                     </td>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-val">
                       ১৯১৬(IX-I)/২০২৫-২৬
                     </td>
                   </tr>
 
                   {/* ডি সি আর নং */}
                   <tr>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        width: "50%",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-label">
                       ডি সি আর নং
                     </td>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-val">
                       23265000605081
                     </td>
                   </tr>
 
                   {/* মালিক, অকৃষি প্রজা বা ইজারাদারের নাম ও ঠিকানা */}
                   <tr>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        width: "50%",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                        verticalAlign: "top",
-                      }}
-                    >
+                    <td className="mqr-td-label">
                       মালিক, অকৃষি প্রজা বা ইজারাদারের নাম ও ঠিকানা
                     </td>
-                    <td
-                      style={{
-                        borderRight: "1px solid #e3e3e3",
-                        borderBottom: "1px solid #e3e3e3",
-                        padding: "10px 15px",
-                        fontSize: "17px",
-                      }}
-                    >
+                    <td className="mqr-td-val">
                       1) নজরুল ইসলাম
                       <br />
-                      বাসা/হোল্ডিং:, গ্রাম/রাস্তা:পশ্চিম বড়দেইল, বুড়ির চর, ডাকঘর:সাগরিয়া বাজার-, উপজেলা: হাতিয়া, জেলা: নোয়াখালী
+                      বাসা/হোল্ডিং:, গ্রাম/রাস্তা:পশ্চিম বড়দেইল, বুড়ির চর, ডাকঘর:সাগরিয়া বাজার-, উপজেলা: হাতিয়া, জেলা: নোখালী
                       <br />
                     </td>
                   </tr>
@@ -355,24 +387,15 @@ export default function MutationQrPage() {
                     <td
                       colSpan={2}
                       style={{
-                        padding: "12px 15px",
+                        padding: "16px 15px",
                       }}
                     >
                       <a
                         href="/mutation-qr/khatian"
                         target="_blank"
                         rel="noreferrer"
-                        style={{
-                          display: "inline-block",
-                          padding: "8px 20px",
-                          backgroundColor: "#28a745",
-                          color: "#ffffff",
-                          borderRadius: "4px",
-                          textDecoration: "none",
-                          fontSize: "16px",
-                          fontWeight: 500,
-                          fontFamily,
-                        }}
+                        className="mqr-btn-download"
+                        style={{ fontFamily }}
                       >
                         খতিয়ান ডাউনলোড
                       </a>
@@ -397,20 +420,8 @@ export default function MutationQrPage() {
           fontFamily,
         }}
       >
-        <div
-          style={{
-            maxWidth: "1080px",
-            margin: "0 auto",
-            display: "block",
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "20px",
-            }}
-          >
+        <div className="mqr-footer-inner">
+          <div className="mqr-footer-grid">
             {/* Footer Logo Section */}
             <div>
               <div style={{ marginBottom: "20px" }}>
@@ -684,3 +695,4 @@ export default function MutationQrPage() {
     </div>
   );
 }
+

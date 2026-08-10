@@ -1,13 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function KhatianPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activePage, setActivePage] = useState<1 | 2>(1);
+  const [zoomLevel, setZoomLevel] = useState<number>(100);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const fontFamily =
     "'Noto Sans Bengali', 'kalpurush', Arial, sans-serif";
+
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      if (!mobile) {
+        setSidebarOpen(true);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const printPage = () => {
     window.print();
@@ -19,6 +34,13 @@ export default function KhatianPage() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    if (isMobile) {
+      setSidebarOpen(false);
+    }
+  };
+
+  const handleZoom = (delta: number) => {
+    setZoomLevel((prev) => Math.min(Math.max(prev + delta, 50), 200));
   };
 
   const cellBase: React.CSSProperties = {
@@ -92,6 +114,7 @@ export default function KhatianPage() {
           </button>
 
           <span
+            className="pdf-toolbar-title"
             style={{
               fontSize: "14px",
               fontWeight: 400,
@@ -105,13 +128,13 @@ export default function KhatianPage() {
         </div>
 
         {/* Center Section: Page Counter & Zoom Controls */}
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "12px", color: "#9aa0a6" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "4px", fontSize: "12px", color: "#9aa0a6" }}>
             <span
               style={{
                 backgroundColor: "#1e1e1e",
                 color: "#f1f3f4",
-                padding: "2px 8px",
+                padding: "2px 6px",
                 borderRadius: "2px",
                 fontSize: "12px",
                 fontFamily: "monospace",
@@ -122,39 +145,26 @@ export default function KhatianPage() {
             <span>/ 2</span>
           </div>
 
-          <div style={{ width: "1px", height: "16px", backgroundColor: "#5f6368" }} />
-
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#e8eaed" }}>
-            <button style={{ background: "transparent", border: "none", color: "#e8eaed", cursor: "pointer", fontSize: "16px" }}>−</button>
-            <span style={{ fontSize: "12px", minWidth: "40px", textAlign: "center" }}>100%</span>
-            <button style={{ background: "transparent", border: "none", color: "#e8eaed", cursor: "pointer", fontSize: "16px" }}>+</button>
-          </div>
-
-          <div style={{ width: "1px", height: "16px", backgroundColor: "#5f6368" }} />
-
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <button title="Fit to page" style={{ background: "transparent", border: "none", color: "#e8eaed", cursor: "pointer", padding: "4px" }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
-              </svg>
+          <div className="pdf-toolbar-zoom-group" style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "#e8eaed" }}>
+            <div style={{ width: "1px", height: "16px", backgroundColor: "#5f6368" }} />
+            <button
+              onClick={() => handleZoom(-10)}
+              style={{ background: "transparent", border: "none", color: "#e8eaed", cursor: "pointer", fontSize: "16px", padding: "0 4px" }}
+            >
+              −
             </button>
-
-            <button title="Rotate clockwise" style={{ background: "transparent", border: "none", color: "#e8eaed", cursor: "pointer", padding: "4px" }}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M15.55 5.55L11 1v3.07C7.06 4.56 4 7.92 4 12s3.05 7.44 7 7.93v-2.02c-2.84-.48-5-2.94-5-5.91s2.16-5.43 5-5.91V10l4.55-4.45zM19.93 11c-.17-1.39-.72-2.73-1.62-3.81l-1.42 1.42c.54.75.9 1.6 1.02 2.39h2.02z" />
-              </svg>
+            <span style={{ fontSize: "12px", minWidth: "36px", textAlign: "center" }}>{zoomLevel}%</span>
+            <button
+              onClick={() => handleZoom(10)}
+              style={{ background: "transparent", border: "none", color: "#e8eaed", cursor: "pointer", fontSize: "16px", padding: "0 4px" }}
+            >
+              +
             </button>
           </div>
         </div>
 
-        {/* Right Section: Present | Download | Print | More */}
-        <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
-          <button title="Present" style={{ background: "transparent", border: "none", color: "#f1f3f4", cursor: "pointer", padding: "4px" }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
-            </svg>
-          </button>
-
+        {/* Right Section: Print | Download */}
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           <button
             onClick={printPage}
             title="Download PDF"
@@ -192,17 +202,24 @@ export default function KhatianPage() {
               <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z" />
             </svg>
           </button>
-
-          <button title="More actions" style={{ background: "transparent", border: "none", color: "#f1f3f4", cursor: "pointer", padding: "4px" }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-            </svg>
-          </button>
         </div>
       </div>
 
       {/* ====== MAIN VIEWPORT AREA ====== */}
-      <div style={{ display: "flex", flex: 1, height: "calc(100vh - 48px)", overflow: "hidden" }}>
+      <div style={{ display: "flex", flex: 1, height: "calc(100vh - 48px)", overflow: "hidden", position: "relative" }}>
+        {/* Mobile Backdrop Overlay */}
+        {isMobile && sidebarOpen && (
+          <div
+            onClick={() => setSidebarOpen(false)}
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              zIndex: 998,
+            }}
+          />
+        )}
+
         {/* Left Sidebar (Thumbnails) */}
         {sidebarOpen && (
           <div
@@ -283,11 +300,13 @@ export default function KhatianPage() {
 
         {/* Right Scrollable Viewport */}
         <div
+          className="khatian-scroll-area"
           style={{
             flex: 1,
             backgroundColor: "#323639",
             overflowY: "auto",
-            padding: "20px 0 40px 0",
+            overflowX: "auto",
+            padding: isMobile ? "12px 6px 40px 6px" : "20px 0 40px 0",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -295,6 +314,18 @@ export default function KhatianPage() {
             boxSizing: "border-box",
           }}
         >
+          {/* Zoom Wrapper */}
+          <div
+            style={{
+              transform: zoomLevel !== 100 ? `scale(${zoomLevel / 100})` : undefined,
+              transformOrigin: "top center",
+              transition: "transform 0.15s ease-out",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "24px",
+            }}
+          >
           {/* ====== PAGE 1 DOCUMENT ====== */}
           <div
             id="khatian-page-1"
@@ -732,9 +763,34 @@ export default function KhatianPage() {
           </div>
         </div>
       </div>
+    </div>
 
-      {/* Print styles */}
+      {/* Print & Mobile Responsive styles */}
       <style>{`
+        @media (max-width: 768px) {
+          .pdf-sidebar {
+            position: absolute !important;
+            left: 0;
+            top: 48px;
+            bottom: 0;
+            z-index: 999;
+            box-shadow: 4px 0 12px rgba(0,0,0,0.5);
+          }
+          .pdf-toolbar-center-tools {
+            display: none !important;
+          }
+          .pdf-toolbar-title {
+            font-size: 12px !important;
+            max-width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .khatian-scroll-area {
+            padding: 10px 8px 30px 8px !important;
+            align-items: flex-start !important;
+          }
+        }
         @media print {
           @page {
             size: A4 landscape;
