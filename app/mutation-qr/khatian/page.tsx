@@ -9,7 +9,7 @@ export default function KhatianPage() {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const fontFamily =
-    "'Noto Sans Bengali', 'kalpurush', Arial, sans-serif";
+    "'kalpurush', 'nikosh', 'Noto Sans Bengali', Arial, sans-serif";
 
   useEffect(() => {
     const handleResize = () => {
@@ -45,10 +45,10 @@ export default function KhatianPage() {
 
   const cellBase: React.CSSProperties = {
     border: "1px solid #000",
-    padding: "3px 4px",
-    fontSize: "9.5px",
+    padding: "6px 6px",
+    fontSize: "11.5px",
     fontFamily,
-    lineHeight: "1.2",
+    lineHeight: "1.35",
     verticalAlign: "middle",
     textAlign: "center",
     fontWeight: "normal",
@@ -57,6 +57,7 @@ export default function KhatianPage() {
 
   const cellHeader: React.CSSProperties = {
     ...cellBase,
+    fontSize: "12px",
     fontWeight: "bold",
     backgroundColor: "transparent",
   };
@@ -123,7 +124,7 @@ export default function KhatianPage() {
               fontFamily: "Roboto, Arial, sans-serif",
             }}
           >
-            আবেদন নং - ১২৬৮০০৪
+            আবেদন নং - ১২৬৮০০০৪
           </span>
         </div>
 
@@ -386,9 +387,9 @@ export default function KhatianPage() {
                       style={{ width: "56px", height: "56px", padding: "0" }}
                     />
                     <div style={{ fontSize: "9.2px", fontFamily, lineHeight: "1.35", textAlign: "left" }}>
-                      <div>আবেদন নম্বর : ১২৬৮০০৪</div>
+                      <div>আবেদন নম্বর : ১২৬৮০০০৪</div>
                       <div>আবেদনের তারিখ : ১৪-৮-২০২৫</div>
-                      <div>নামজারির মামলা নং: ১৯১৬ (IX-I)/ ২০২৫-২৬</div>
+                      <div>নামজারির মামলা নং: ১৯২৬ (IX-I)/ ২০২৫-২৬</div>
                       <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮১</div>
                     </div>
                   </div>
@@ -398,10 +399,10 @@ export default function KhatianPage() {
                 <div
                   style={{
                     width: "100%",
-                    fontSize: "9.8px",
+                    fontSize: "11px",
                     fontFamily,
                     marginTop: "4px",
-                    marginBottom: "6px",
+                    marginBottom: "8px",
                     padding: "2px 4px",
                     display: "flex",
                     justifyContent: "space-between",
@@ -420,7 +421,7 @@ export default function KhatianPage() {
                   style={{
                     width: "100%",
                     borderCollapse: "collapse",
-                    fontSize: "9.5px",
+                    fontSize: "11.5px",
                     fontFamily,
                     tableLayout: "fixed",
                   }}
@@ -452,7 +453,7 @@ export default function KhatianPage() {
                       <th colSpan={2} style={{ ...cellHeader, width: "11.5%" }}>
                         অংশানুযায়ী জমির<br />পরিমাণ
                       </th>
-                      <th style={{ ...cellHeader, width: "19%", fontSize: "9px" }}>
+                      <th style={{ ...cellHeader, width: "19%", fontSize: "11px" }}>
                         দখল/স্বত্ব বিষয়ক বা অন্যান্য<br />বিষয়ে মন্তব্য
                       </th>
                     </tr>
@@ -462,165 +463,164 @@ export default function KhatianPage() {
                       <th style={cellHeader}>২</th>
                       <th style={cellHeader}>৩</th>
                       <th style={cellHeader}>৪</th>
-                      <th style={{ ...cellHeader, fontSize: "8.5px" }}>কৃষি<br />৫ (ক)</th>
-                      <th style={{ ...cellHeader, fontSize: "8.5px" }}>অকৃষি<br />৫ (খ)</th>
-                      <th style={{ ...cellHeader, fontSize: "8.5px" }}>একর<br />৬ (ক)</th>
-                      <th style={{ ...cellHeader, fontSize: "8.5px" }}>শতাংশ<br />৬ (খ)</th>
+                      <th style={{ ...cellHeader, fontSize: "10.5px" }}>কৃষি<br />৫ (ক)</th>
+                      <th style={{ ...cellHeader, fontSize: "10.5px" }}>অকৃষি<br />৫ (খ)</th>
+                      <th style={{ ...cellHeader, fontSize: "10.5px" }}>একর<br />৬ (ক)</th>
+                      <th style={{ ...cellHeader, fontSize: "10.5px" }}>শতাংশ<br />৬ (খ)</th>
                       <th style={cellHeader}>৭</th>
-                      <th style={{ ...cellHeader, fontSize: "8.5px" }}>একর<br />৮ (ক)</th>
-                      <th style={{ ...cellHeader, fontSize: "8.5px" }}>শতাংশ<br />৮ (খ)</th>
+                      <th style={{ ...cellHeader, fontSize: "10.5px" }}>একর<br />৮ (ক)</th>
+                      <th style={{ ...cellHeader, fontSize: "10.5px" }}>শতাংশ<br />৮ (খ)</th>
                       <th style={cellHeader}>৯</th>
                     </tr>
                   </thead>
                   <tbody>
                     {/* Data Row */}
-                    <tr>
-                      <td style={{ ...cellBase, textAlign: "left", fontSize: "9px", lineHeight: "1.35", padding: "4px 5px" }}>
-                        <div style={{ fontWeight: "bold", fontSize: "9.5px" }}>নজরুল ইসলাম</div>
-                        <div style={{ fontSize: "8.8px", color: "#000" }}>পিতা/স্বামী: মোঃ নুর নবী</div>
-                        <div style={{ fontSize: "8.8px", color: "#000" }}>জাতীয় পরিচয়পত্র: ৩৭০১২০১২১৬</div>
-                        <div style={{ fontSize: "8.5px", color: "#000" }}>
+                    <tr style={{ height: "240px" }}>
+                      <td style={{ ...cellBase, textAlign: "left", fontSize: "11.5px", lineHeight: "1.5", padding: "12px 8px", verticalAlign: "top" }}>
+                        <div style={{ fontWeight: "bold", fontSize: "12.5px", marginBottom: "4px" }}>নজরুল ইসলাম</div>
+                        <div style={{ fontSize: "11px", color: "#000", marginBottom: "2px" }}>পিতা/স্বামী: মোঃ নুর নবী</div>
+                        <div style={{ fontSize: "11px", color: "#000", marginBottom: "2px" }}>জাতীয় পরিচয়পত্র: ৩৭০১২০১২১৬</div>
+                        <div style={{ fontSize: "10.8px", color: "#000", marginTop: "4px" }}>
                           বাসা/হোল্ডিং:, গ্রাম/রাস্তা:পশ্চিম বড়দেইল, বুড়ির চর, ডাকঘর:সাগরিয়া বাজার-, উপজেলা: হাতিয়া, জেলা: নোয়াখালী
                         </div>
                       </td>
-                      <td style={cellBase}>১.০০০</td>
-                      <td style={cellBase}>৬০</td>
-                      <td style={cellBase}>৯০</td>
-                      <td style={cellBase}></td>
-                      <td style={cellBase}>বাড়ি আবাসিক</td>
-                      <td style={cellBase}>০</td>
-                      <td style={cellBase}>১.৪৫</td>
-                      <td style={cellBase}>১.৪৫</td>
-                      <td style={cellBase}>০</td>
-                      <td style={cellBase}>১.৪৫</td>
-                      <td style={{ ...cellBase, textAlign: "left", fontSize: "8.8px", lineHeight: "1.4", padding: "4px 5px" }}>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>১.০০০</td>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>৬০</td>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>৯০</td>
+                      <td style={{ ...cellBase, verticalAlign: "top", paddingTop: "12px" }}></td>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>বাড়ি আবাসিক</td>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>০</td>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>১.৪৫</td>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>১.৪৫</td>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>০</td>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>১.৪৫</td>
+                      <td style={{ ...cellBase, textAlign: "left", fontSize: "11px", lineHeight: "1.5", padding: "12px 8px", verticalAlign: "top" }}>
                         <div>দলিল নং: ৬৫৯১</div>
                         <div>তাং: ২৪/০৭/২০২৫</div>
                         <div>পল্লবী, ঢাকা</div>
-                        <div style={{ marginTop: "6px" }}>জোত নং ১৫৬/৮ ।</div>
-                        <div style={{ marginTop: "6px" }}>নামজারি ও জমাভাগ অনুমোদনের তারিখঃ ১৯/১১/২০২৩ খ্রিঃ।</div>
+                        <div style={{ marginTop: "8px" }}>জোত নং ১৫৬/৮ ।</div>
+                        <div style={{ marginTop: "8px" }}>নামজারি ও জমাভাগ অনুমোদনের তারিখঃ ১৯/০৮/২০২৫ খ্রিঃ।</div>
                       </td>
                     </tr>
                     {/* Summary Row */}
                     <tr>
-                      <td style={{ ...cellBase, fontSize: "8.5px", textAlign: "left", padding: "3px 5px" }}>
+                      <td style={{ ...cellBase, fontSize: "10.8px", textAlign: "left", padding: "6px 6px" }}>
                         ...১৪৩ ও ১১৬/১১৯...ধারামতে নোট বা পরিবর্তন মায় মোকদ্দমা এবং সন ।
                       </td>
-                      <td style={cellBase}>১.০০০</td>
+                      <td style={{ ...cellBase, fontSize: "12px" }}>১.০০০</td>
                       <td style={cellBase}></td>
                       <td style={cellBase}></td>
                       <td style={cellBase}></td>
                       <td style={cellBase}></td>
                       <td style={cellBase}></td>
                       <td style={cellBase}></td>
-                      <td style={{ ...cellBase, fontWeight: "bold" }}>মোট জমি</td>
-                      <td style={cellBase}>০</td>
-                      <td style={cellBase}>১.৪৫</td>
-                      <td style={{ ...cellBase, fontSize: "8.8px", textAlign: "left", fontWeight: "bold", padding: "3px 5px" }}>
+                      <td style={{ ...cellBase, fontWeight: "bold", fontSize: "12px" }}>মোট জমি</td>
+                      <td style={{ ...cellBase, fontSize: "12px" }}>০</td>
+                      <td style={{ ...cellBase, fontSize: "12px" }}>১.৪৫</td>
+                      <td style={{ ...cellBase, fontSize: "11.5px", textAlign: "left", fontWeight: "bold", padding: "6px 6px" }}>
                         কথায়: ০ একর ১ শতক ৪৫ অযুতাংশ
                       </td>
                     </tr>
                   </tbody>
                 </table>
+
+                {/* Signature Section directly after the table finish */}
+                <div style={{ marginTop: "16px" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "flex-end",
+                      padding: "0 5px",
+                    }}
+                  >
+                    {/* ১. প্রস্তাবিত খতিয়ান */}
+                    <div style={{ textAlign: "center", width: "23.5%", position: "relative" }}>
+                      <div style={{ minHeight: "45px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <img
+                          src="/mutation-images/stamp-1.png"
+                          alt="Signature 1"
+                          style={{ maxHeight: "38px", maxWidth: "90%", objectFit: "contain" }}
+                        />
+                      </div>
+                      <div style={{ borderTop: "1px solid #701a75", marginTop: "2px", paddingTop: "2px" }}>
+                        <div style={{ fontSize: "9.5px", fontFamily, fontWeight: "bold", color: "#000" }}>প্রস্তাবিত খতিয়ান</div>
+                        <div style={{ fontSize: "8.8px", fontFamily, color: "#701a75" }}>১৪/০৮/২০২৫</div>
+                        <div style={{ fontSize: "9.5px", fontFamily, color: "#701a75", fontWeight: "bold" }}>(আফরোজা খাতুন)</div>
+                        <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>ইউনিয়ন ভূমি সহকারী কর্মকর্তা (ভারপ্রাপ্ত)</div>
+                        <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>সেনপাড়া পর্বতা ভূমি অফিস</div>
+                      </div>
+                    </div>
+
+                    {/* ২. প্রস্তাবিত খতিয়ান সঠিক পাওয়া গেল */}
+                    <div style={{ textAlign: "center", width: "23.5%", position: "relative" }}>
+                      <div style={{ minHeight: "45px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <img
+                          src="/mutation-images/stamp-3.png"
+                          alt="Signature 2"
+                          style={{ maxHeight: "38px", maxWidth: "90%", objectFit: "contain" }}
+                        />
+                      </div>
+                      <div style={{ borderTop: "1px solid #701a75", marginTop: "2px", paddingTop: "2px" }}>
+                        <div style={{ fontSize: "9.5px", fontFamily, fontWeight: "bold", color: "#000" }}>প্রস্তাবিত খতিয়ান সঠিক পাওয়া গেলো।</div>
+                        <div style={{ fontSize: "8.8px", fontFamily, color: "#701a75" }}>১৯/০৮/২০২৫</div>
+                        <div style={{ fontSize: "9.5px", fontFamily, color: "#701a75", fontWeight: "bold" }}>(নাঈম আহমাদ)</div>
+                        <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>সার্ভেয়ার</div>
+                        <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>মোহাম্মদপুর রাজস্ব সার্কেল</div>
+                      </div>
+                    </div>
+
+                    {/* ৩. পরীক্ষান্তে সঠিক পাওয়া গেল */}
+                    <div style={{ textAlign: "center", width: "23.5%", position: "relative" }}>
+                      <div style={{ minHeight: "45px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <img
+                          src="/mutation-images/stamp-4.png"
+                          alt="Signature 3"
+                          style={{ maxHeight: "38px", maxWidth: "90%", objectFit: "contain" }}
+                        />
+                      </div>
+                      <div style={{ borderTop: "1px solid #701a75", marginTop: "2px", paddingTop: "2px" }}>
+                        <div style={{ fontSize: "9.5px", fontFamily, fontWeight: "bold", color: "#000" }}>পরীক্ষান্তে সঠিক পাওয়া গেল।</div>
+                        <div style={{ fontSize: "8.8px", fontFamily, color: "#701a75" }}>১৯/০৮/২০২৫</div>
+                        <div style={{ fontSize: "9.5px", fontFamily, color: "#701a75", fontWeight: "bold" }}>(মোঃ নওয়াব হোসেন রাজা)</div>
+                        <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>কানুনগো (ভারপ্রাপ্ত)</div>
+                        <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>মোহাম্মদপুর রাজস্ব সার্কেল</div>
+                      </div>
+                    </div>
+
+                    {/* ৪. অনুমোদিত */}
+                    <div style={{ textAlign: "center", width: "23.5%", position: "relative" }}>
+                      <div style={{ minHeight: "45px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <img
+                          src="/mutation-images/stamp-5.png"
+                          alt="Signature 4"
+                          style={{ maxHeight: "42px", maxWidth: "95%", objectFit: "contain" }}
+                        />
+                      </div>
+                      <div style={{ borderTop: "1px solid #701a75", marginTop: "2px", paddingTop: "2px" }}>
+                        <div style={{ fontSize: "9.5px", fontFamily, fontWeight: "bold", color: "#000" }}>অনুমোদিত</div>
+                        <div style={{ fontSize: "8.8px", fontFamily, color: "#701a75" }}>১৯/০৮/২০২৫</div>
+                        <div style={{ fontSize: "9.5px", fontFamily, color: "#701a75", fontWeight: "bold" }}>(মোঃ আবুবকর সিদ্দিক)</div>
+                        <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>সহকারী কমিশনার (ভূমি)</div>
+                        <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>মোহাম্মদপুর রাজস্ব সার্কেল</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* Signature Section with official stamps & purple text */}
-              <div>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-end",
-                    marginBottom: "4px",
-                    padding: "0 5px",
-                  }}
-                >
-                  {/* ১. প্রস্তাবিত খতিয়ান */}
-                  <div style={{ textAlign: "center", width: "23.5%", position: "relative" }}>
-                    <div style={{ minHeight: "45px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <img
-                        src="/mutation-images/stamp-1.png"
-                        alt="Signature 1"
-                        style={{ maxHeight: "38px", maxWidth: "90%", objectFit: "contain" }}
-                      />
-                    </div>
-                    <div style={{ borderTop: "1px solid #701a75", marginTop: "2px", paddingTop: "2px" }}>
-                      <div style={{ fontSize: "9.5px", fontFamily, fontWeight: "bold", color: "#000" }}>প্রস্তাবিত খতিয়ান</div>
-                      <div style={{ fontSize: "8.8px", fontFamily, color: "#701a75" }}>১৪/০৮/২০২৫</div>
-                      <div style={{ fontSize: "9.5px", fontFamily, color: "#701a75", fontWeight: "bold" }}>(আফরোজা খাতুন)</div>
-                      <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>ইউনিয়ন ভূমি সহকারী কর্মকর্তা (ভারপ্রাপ্ত)</div>
-                      <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>সেনপাড়া পর্বতা ভূমি অফিস</div>
-                    </div>
-                  </div>
-
-                  {/* ২. প্রস্তাবিত খতিয়ান সঠিক পাওয়া গেল */}
-                  <div style={{ textAlign: "center", width: "23.5%", position: "relative" }}>
-                    <div style={{ minHeight: "45px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <img
-                        src="/mutation-images/stamp-3.png"
-                        alt="Signature 2"
-                        style={{ maxHeight: "38px", maxWidth: "90%", objectFit: "contain" }}
-                      />
-                    </div>
-                    <div style={{ borderTop: "1px solid #701a75", marginTop: "2px", paddingTop: "2px" }}>
-                      <div style={{ fontSize: "9.5px", fontFamily, fontWeight: "bold", color: "#000" }}>প্রস্তাবিত খতিয়ান সঠিক পাওয়া গেলো।</div>
-                      <div style={{ fontSize: "8.8px", fontFamily, color: "#701a75" }}>১৯/০৮/২০২৫</div>
-                      <div style={{ fontSize: "9.5px", fontFamily, color: "#701a75", fontWeight: "bold" }}>(নাঈম আহমাদ)</div>
-                      <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>সার্ভেয়ার</div>
-                      <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>মোহাম্মদপুর রাজস্ব সার্কেল</div>
-                    </div>
-                  </div>
-
-                  {/* ৩. পরীক্ষান্তে সঠিক পাওয়া গেল */}
-                  <div style={{ textAlign: "center", width: "23.5%", position: "relative" }}>
-                    <div style={{ minHeight: "45px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <img
-                        src="/mutation-images/stamp-4.png"
-                        alt="Signature 3"
-                        style={{ maxHeight: "38px", maxWidth: "90%", objectFit: "contain" }}
-                      />
-                    </div>
-                    <div style={{ borderTop: "1px solid #701a75", marginTop: "2px", paddingTop: "2px" }}>
-                      <div style={{ fontSize: "9.5px", fontFamily, fontWeight: "bold", color: "#000" }}>পরীক্ষান্তে সঠিক পাওয়া গেল।</div>
-                      <div style={{ fontSize: "8.8px", fontFamily, color: "#701a75" }}>১৯/০৮/২০২৫</div>
-                      <div style={{ fontSize: "9.5px", fontFamily, color: "#701a75", fontWeight: "bold" }}>(মোঃ নওয়াব হোসেন রাজা)</div>
-                      <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>কানুনগো (ভারপ্রাপ্ত)</div>
-                      <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>মোহাম্মদপুর রাজস্ব সার্কেল</div>
-                    </div>
-                  </div>
-
-                  {/* ৪. অনুমোদিত */}
-                  <div style={{ textAlign: "center", width: "23.5%", position: "relative" }}>
-                    <div style={{ minHeight: "45px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <img
-                        src="/mutation-images/stamp-5.png"
-                        alt="Signature 4"
-                        style={{ maxHeight: "38px", maxWidth: "90%", objectFit: "contain" }}
-                      />
-                    </div>
-                    <div style={{ borderTop: "1px solid #701a75", marginTop: "2px", paddingTop: "2px" }}>
-                      <div style={{ fontSize: "9.5px", fontFamily, fontWeight: "bold", color: "#000" }}>অনুমোদিত</div>
-                      <div style={{ fontSize: "8.8px", fontFamily, color: "#701a75" }}>১৯/০৮/২০২৫</div>
-                      <div style={{ fontSize: "9.5px", fontFamily, color: "#701a75", fontWeight: "bold" }}>(মোঃ আবুবকর সিদ্দিক)</div>
-                      <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>সহকারী কমিশনার (ভূমি)</div>
-                      <div style={{ fontSize: "8px", fontFamily, color: "#701a75" }}>মোহাম্মদপুর রাজস্ব সার্কেল</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Page number */}
-                <div
-                  style={{
-                    textAlign: "right",
-                    fontSize: "11px",
-                    fontFamily: "Arial, sans-serif",
-                    fontWeight: "bold",
-                    color: "#000",
-                    paddingRight: "5px",
-                  }}
-                >
-                  1/2
-                </div>
+              {/* Page number */}
+              <div
+                style={{
+                  textAlign: "right",
+                  fontSize: "11px",
+                  fontFamily: "Arial, sans-serif",
+                  fontWeight: "bold",
+                  color: "#000",
+                  paddingRight: "5px",
+                }}
+              >
+                1/2
               </div>
             </div>
           </div>
@@ -680,9 +680,9 @@ export default function KhatianPage() {
                       style={{ width: "56px", height: "56px", padding: "0" }}
                     />
                     <div style={{ fontSize: "9.2px", fontFamily, lineHeight: "1.35", textAlign: "left" }}>
-                      <div>আবেদন নম্বর : ১২৬৮০০৪</div>
+                      <div>আবেদন নম্বর : ১২৬৮০০০৪</div>
                       <div>আবেদনের তারিখ : ১৪-৮-২০২৫</div>
-                      <div>নামজারির মামলা নং: ১৯১৬ (IX-I)/ ২০২৫-২৬</div>
+                      <div>নামজারির মামলা নং: ১৯২৬ (IX-I)/ ২০২৫-২৬</div>
                       <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮১</div>
                     </div>
                   </div>
@@ -692,7 +692,7 @@ export default function KhatianPage() {
                 <div
                   style={{
                     width: "100%",
-                    fontSize: "9.8px",
+                    fontSize: "11px",
                     fontFamily,
                     marginTop: "4px",
                     marginBottom: "16px",
@@ -713,7 +713,7 @@ export default function KhatianPage() {
                 <div style={{ padding: "8px 5px" }}>
                   <div
                     style={{
-                      fontSize: "11px",
+                      fontSize: "12px",
                       fontWeight: "bold",
                       fontFamily,
                       marginBottom: "10px",
@@ -724,9 +724,9 @@ export default function KhatianPage() {
                   </div>
                   <div
                     style={{
-                      fontSize: "10px",
+                      fontSize: "11.5px",
                       fontFamily,
-                      lineHeight: "2",
+                      lineHeight: "2.1",
                       color: "#000",
                     }}
                   >
