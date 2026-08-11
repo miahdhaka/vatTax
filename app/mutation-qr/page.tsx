@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function MutationQrPage() {
   const fontFamily =
-    "'Noto Sans Bengali', 'kalpurush', Arial, sans-serif";
+    "'kalpurush', 'nikosh', 'Noto Sans Bengali', Arial, sans-serif";
 
   const [formattedDate, setFormattedDate] = useState("রবিবার, ৯ আগস্ট ২০২৬");
 
@@ -84,7 +84,7 @@ export default function MutationQrPage() {
         }
         .mqr-table-box {
           margin: 0 auto;
-          width: 80%;
+          width: 100%;
         }
         .mqr-table {
           width: 100%;
@@ -98,25 +98,29 @@ export default function MutationQrPage() {
           border-right: 1px solid #e3e3e3;
           border-bottom: 1px solid #e3e3e3;
           width: 45%;
-          padding: 12px 15px;
-          font-size: 16px;
-          vertical-align: top;
+          padding: 32px 24px;
+          font-size: 18px;
+          line-height: 1.6;
+          vertical-align: middle;
+          font-family: 'kalpurush', 'nikosh', 'Noto Sans Bengali', Arial, sans-serif;
         }
         .mqr-td-val {
           border-right: 1px solid #e3e3e3;
           border-bottom: 1px solid #e3e3e3;
-          padding: 12px 15px;
-          font-size: 16px;
-          vertical-align: top;
+          padding: 32px 24px;
+          font-size: 18px;
+          line-height: 1.6;
+          vertical-align: middle;
+          font-family: 'kalpurush', 'nikosh', 'Noto Sans Bengali', Arial, sans-serif;
         }
         .mqr-btn-download {
           display: inline-block;
-          padding: 10px 24px;
+          padding: 14px 32px;
           background-color: #28a745;
           color: #ffffff;
           border-radius: 4px;
           text-decoration: none;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 500;
           text-align: center;
           transition: background-color 0.2s ease;
@@ -161,12 +165,12 @@ export default function MutationQrPage() {
           }
           .mqr-td-label {
             width: 42%;
-            padding: 10px 12px;
-            font-size: 14.5px;
+            padding: 21px 16px;
+            font-size: 16px;
           }
           .mqr-td-val {
-            padding: 10px 12px;
-            font-size: 14.5px;
+            padding: 21px 16px;
+            font-size: 16px;
           }
           .mqr-footer-grid {
             grid-template-columns: repeat(2, 1fr) !important;
@@ -176,7 +180,7 @@ export default function MutationQrPage() {
             display: block;
             width: 100%;
             box-sizing: border-box;
-            padding: 12px;
+            padding: 14px;
           }
         }
 
@@ -190,12 +194,12 @@ export default function MutationQrPage() {
           }
           .mqr-td-label {
             width: 44%;
-            padding: 8px 10px;
-            font-size: 13.5px;
+            padding: 18px 14px;
+            font-size: 15px;
           }
           .mqr-td-val {
-            padding: 8px 10px;
-            font-size: 13.5px;
+            padding: 18px 14px;
+            font-size: 15px;
           }
           .mqr-footer-grid {
             grid-template-columns: 1fr !important;
@@ -297,10 +301,10 @@ export default function MutationQrPage() {
                     <td
                       colSpan={2}
                       style={{
-                        padding: "12px 15px",
+                        padding: "24px 22px",
                         borderBottom: "1px solid #e3e3e3",
-                        fontSize: "15px",
-                        lineHeight: "1.4",
+                        fontSize: "17px",
+                        lineHeight: "1.6",
                       }}
                     >
                       <b>
@@ -335,7 +339,7 @@ export default function MutationQrPage() {
                       আবেদন নম্বর
                     </td>
                     <td className="mqr-td-val">
-                      ১২৬৮০০৪
+                      ১২৬৮০০০৪
                     </td>
                   </tr>
 
@@ -355,7 +359,7 @@ export default function MutationQrPage() {
                       মিউটেশন মামলা নং
                     </td>
                     <td className="mqr-td-val">
-                      ১৯১৬(IX-I)/২০২৫-২৬
+                      ১৯২৬(IX-I)/২০২৫-২৬
                     </td>
                   </tr>
 
@@ -387,7 +391,7 @@ export default function MutationQrPage() {
                     <td
                       colSpan={2}
                       style={{
-                        padding: "16px 15px",
+                        padding: "32px 24px",
                       }}
                     >
                       <a
