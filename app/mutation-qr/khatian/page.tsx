@@ -124,7 +124,7 @@ export default function KhatianPage() {
               fontFamily: "Roboto, Arial, sans-serif",
             }}
           >
-            আবেদন নং - ১২৬৮০০০৪
+            আবেদন নং - ১২৬৬৫৯৭৬
           </span>
         </div>
 
@@ -387,13 +387,13 @@ export default function KhatianPage() {
                       style={{ width: "56px", height: "56px", padding: "0" }}
                     />
                     <div style={{ fontSize: "9.2px", fontFamily, lineHeight: "1.35", textAlign: "left" }}>
-                      <div>আবেদন নম্বর : ১২৬৮০০০৪</div>
+                      <div>আবেদন নম্বর : ১২৬৬৫৯৭৬</div>
                       <div>আবেদনের তারিখ : ১৪-৮-২০২৫</div>
-                      <div>নামজারির মামলা নং: ১৯২৬ (IX-I)/ ২০২৫-২৬</div>
-                      <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮১</div>
+                      <div>নামজারির মামলা নং: ১৯১৬ (IX-I)/ ২০২৫-২৬</div>
+                      <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮২</div>
                     </div>
                   </div>
-                </div>
+                </div> 
 
                 {/* Location Row */}
                 <div
@@ -680,7 +680,7 @@ export default function KhatianPage() {
                       style={{ width: "56px", height: "56px", padding: "0" }}
                     />
                     <div style={{ fontSize: "9.2px", fontFamily, lineHeight: "1.35", textAlign: "left" }}>
-                      <div>আবেদন নম্বর : ১২৬৮০০০৪</div>
+                      <div>আবেদন নম্বর : ১২৬৬৫৯৭৬</div>
                       <div>আবেদনের তারিখ : ১৪-৮-২০২৫</div>
                       <div>নামজারির মামলা নং: ১৯২৬ (IX-I)/ ২০২৫-২৬</div>
                       <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮১</div>
