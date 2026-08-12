@@ -124,7 +124,7 @@ export default function KhatianPage() {
               fontFamily: "Roboto, Arial, sans-serif",
             }}
           >
-            আবেদন নং - ১২৬৬৫৯৭৬
+            আবেদন নং - ১২৬৮০০০৪
           </span>
         </div>
 
@@ -260,7 +260,7 @@ export default function KhatianPage() {
                 }}
               >
                 <div style={{ fontSize: "5px", fontFamily, transform: "scale(0.22)", transformOrigin: "top left", width: "800px" }}>
-                  <div style={{ fontWeight: "bold", fontSize: "14px" }}>খতিয়ান নং ১৫৬২</div>
+                  <div style={{ fontWeight: "bold", fontSize: "14px" }}>খতিয়ান নং ১৫৬১</div>
                   <div style={{ border: "1px solid #000", height: "300px", marginTop: "10px" }} />
                 </div>
               </div>
@@ -374,7 +374,7 @@ export default function KhatianPage() {
                       letterSpacing: "0.5px",
                     }}
                   >
-                    খতিয়ান নং ১৫৬২
+                    খতিয়ান নং ১৫৬১
                   </div>
 
                   {/* Right: Application info + QR Code (QR on LEFT, ONLY line 3 has bullet) */}
@@ -387,10 +387,10 @@ export default function KhatianPage() {
                       style={{ width: "56px", height: "56px", padding: "0" }}
                     />
                     <div style={{ fontSize: "9.2px", fontFamily, lineHeight: "1.35", textAlign: "left" }}>
-                      <div>আবেদন নম্বর : ১২৬৬৫৯৭৬</div>
+                      <div>আবেদন নম্বর : ১২৬৮০০০৪</div>
                       <div>আবেদনের তারিখ : ১৪-৮-২০২৫</div>
                       <div>নামজারির মামলা নং: ১৯১৬ (IX-I)/ ২০২৫-২৬</div>
-                      <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮২</div>
+                      <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮১</div>
                     </div>
                   </div>
                 </div> 
@@ -486,7 +486,7 @@ export default function KhatianPage() {
                       </td>
                       <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>১.০০০</td>
                       <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>৬০</td>
-                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>৯০</td>
+                      <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>৯৯</td>
                       <td style={{ ...cellBase, verticalAlign: "top", paddingTop: "12px" }}></td>
                       <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>বাড়ি আবাসিক</td>
                       <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>০</td>
@@ -498,7 +498,7 @@ export default function KhatianPage() {
                         <div>দলিল নং: ৬৫৯৩</div>
                         <div>তাং: ২৪/০৭/২০২৫</div>
                         <div>পল্লবী, ঢাকা</div>
-                        <div style={{ marginTop: "8px" }}>জোত নং ১৫৬/৮ ।</div>
+                        <div style={{ marginTop: "8px" }}>জোত নং ১৫৫/৮ ।</div>
                         <div style={{ marginTop: "8px" }}>নামজারি ও জমাভাগ অনুমোদনের তারিখঃ ১৯/০৮/২০২৫ খ্রিঃ।</div>
                       </td>
                     </tr>
@@ -674,13 +674,13 @@ export default function KhatianPage() {
                   <div style={{ display: "flex", gap: "8px", alignItems: "flex-start", justifyContent: "flex-end", width: "38%" }}>
                     <img
                       src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=0&qzone=1&ecc=M&data=${encodeURIComponent(
-                        "https://dakhilaldtaxgovbd.vercel.app/mutation-qr"
+                        "https://dakhilaldtaxgovbd.vercel.app/mutation-qr-2"
                       )}`}
                       alt="QR"
                       style={{ width: "56px", height: "56px", padding: "0" }}
                     />
                     <div style={{ fontSize: "9.2px", fontFamily, lineHeight: "1.35", textAlign: "left" }}>
-                      <div>আবেদন নম্বর : ১২৬৬৫৯৭৬</div>
+                      <div>আবেদন নম্বর : ১২৬৮০০০৪</div>
                       <div>আবেদনের তারিখ : ১৪-৮-২০২৫</div>
                       <div>নামজারির মামলা নং: ১৯২৬ (IX-I)/ ২০২৫-২৬</div>
                       <div>অনলাইন ডিসিয়ার নং: ২৩২৬৫০০০০৬০৫০৮১</div>
