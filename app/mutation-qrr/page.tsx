@@ -395,7 +395,7 @@ export default function MutationQrPage() {
                       }}
                     >
                       <a
-                        href="/mutation-qr/khatian"
+                        href="/mutation-qrr/khatian"
                         target="_blank"
                         rel="noreferrer"
                         className="mqr-btn-download"
