@@ -381,7 +381,7 @@ export default function KhatianPage() {
                   <div style={{ display: "flex", gap: "8px", alignItems: "flex-start", justifyContent: "flex-end", width: "38%" }}>
                     <img
                       src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=0&qzone=1&ecc=M&data=${encodeURIComponent(
-                        "https://dakhilaldtaxgovbd.vercel.app/mutation-qr"
+                        "https://dakhilaldtaxgovbd.vercel.app/mutation-qrr"
                       )}`}
                       alt="QR"
                       style={{ width: "56px", height: "56px", padding: "0" }}
