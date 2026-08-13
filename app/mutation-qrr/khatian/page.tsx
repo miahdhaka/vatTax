@@ -290,7 +290,7 @@ export default function KhatianPage() {
                 }}
               >
                 <div style={{ fontSize: "5px", fontFamily, transform: "scale(0.22)", transformOrigin: "top left", width: "800px" }}>
-                  <div style={{ fontWeight: "bold", fontSize: "14px" }}>খতিয়ান নং ১৫৬২</div>
+                  <div style={{ fontWeight: "bold", fontSize: "14px" }}>খতিয়ান নং ১৫৬১</div>
                   <div style={{ marginTop: "10px" }}>বিশেষ দ্রষ্টব্য: ...</div>
                 </div>
               </div>
@@ -669,7 +669,7 @@ export default function KhatianPage() {
                       letterSpacing: "0.5px",
                     }}
                   >
-                    খতিয়ান নং ১৫৬২
+                    খতিয়ান নং ১৫৬১
                   </div>
                   <div style={{ display: "flex", gap: "8px", alignItems: "flex-start", justifyContent: "flex-end", width: "38%" }}>
                     <img
