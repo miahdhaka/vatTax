@@ -495,7 +495,7 @@ export default function KhatianPage() {
                       <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>০</td>
                       <td style={{ ...cellBase, fontSize: "12px", verticalAlign: "top", paddingTop: "12px" }}>১.৪৫</td>
                       <td style={{ ...cellBase, textAlign: "left", fontSize: "11px", lineHeight: "1.5", padding: "12px 8px", verticalAlign: "top" }}>
-                        <div>দলিল নং: ৬৫৯৩</div>
+                        <div>দলিল নং: ৬৫৯১</div>
                         <div>তাং: ২৪/০৭/২০২৫</div>
                         <div>পল্লবী, ঢাকা</div>
                         <div style={{ marginTop: "8px" }}>জোত নং ১৫৬/৮ ।</div>
